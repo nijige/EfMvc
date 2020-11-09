@@ -1,9 +1,21 @@
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Nutri.Models
 {
     public class FichaTecnicaViewModels
     {
-        public IEnumerable<FichaTecnica> FichaTecnicas { get; set; }
+
+        public Guid Id { get; set; }
+
+        [Required(ErrorMessage = "Preenchimento obrigatório")]
+        public string NomePreparacao { get; set; }
+
+        [Required(ErrorMessage = "Preenchimento obrigatório")]
+        public decimal? Rendimento { get; set; }
+
     }
+
+
 }

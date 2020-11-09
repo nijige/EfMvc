@@ -5,6 +5,7 @@ namespace Nutri.Models
 {
     public class FichaTecnica
     {
+
         public Guid Id { get; set; }
 
         public string Ingredientes { get; set; }
@@ -24,6 +25,8 @@ namespace Nutri.Models
         public int CustoPorcao { get; set; }
 
         public DateTimeOffset? DataConclusão { get; set; }
+
+
 
 
     }
