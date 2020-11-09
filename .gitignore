@@ -1,0 +1,8 @@
+bin
+obj
+
+
+# compiled output
+/dist
+/tmp
+/out-tsc
