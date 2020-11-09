@@ -8,6 +8,8 @@ namespace Nutri.Models
 
         public Guid Id { get; set; }
 
+        public string NomePreparacao { get; set; }
+
         public string Ingredientes { get; set; }
 
         public string Descricao { get; set; }
