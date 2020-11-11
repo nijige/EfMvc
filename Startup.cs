@@ -21,8 +21,7 @@ namespace Nutri
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("Server=(localdb)\\mssqllocaldb;Database=DataContext-bc;Trusted_Connection=True;MultipleActiveResultSets=true"
-  )));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<DbContext>();
 
