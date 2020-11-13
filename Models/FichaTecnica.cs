@@ -28,6 +28,9 @@ namespace Nutri.Models
 
         public DateTimeOffset? DataConclusão { get; set; }
 
+        public int CategoriaId { get; set; }
+        public Categoria Categoria { get; set; }
+
 
 
 
