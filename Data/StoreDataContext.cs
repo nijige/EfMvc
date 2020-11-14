@@ -10,7 +10,7 @@ namespace Nutri.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost,1433;Database=pdtcl;User ID=SA;Password=123");
+            optionsBuilder.UseSqlServer(@"Server=localhost,1433;Database=nutri;User ID=SA;Password=123");
 
         }
 
