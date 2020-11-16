@@ -5,6 +5,7 @@ namespace Nutri.Models
 {
     public class FichaTecnica
     {
+      
 
         public Guid Id { get; set; }
 
