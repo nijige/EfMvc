@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Nutri.Models
+namespace Nutri.Mvc.Models
 {
     public class Categoria
     {

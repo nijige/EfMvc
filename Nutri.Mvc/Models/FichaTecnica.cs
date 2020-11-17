@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace Nutri.Models
+namespace Nutri.Mvc.Models
 {
     public class FichaTecnica
     {
-      
+
 
         public Guid Id { get; set; }
 
