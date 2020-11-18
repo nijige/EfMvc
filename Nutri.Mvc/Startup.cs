@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Nutri.Data;
+using Nutri.Mock;
 
 namespace Nutri.Mvc
 {
@@ -28,6 +29,7 @@ namespace Nutri.Mvc
             services.AddControllersWithViews();
             services.AddDbContext<Contexto>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddSingleton<FichaTecnicaRepositoryFake>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
