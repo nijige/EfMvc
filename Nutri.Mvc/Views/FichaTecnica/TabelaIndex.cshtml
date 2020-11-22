@@ -1,45 +1,72 @@
-@model IEnumerable<Nutri.Mvc.Models.FichaTecnica>
+@using Nutri.Mvc.Utils
+@model PaginatedList<Nutri.Mvc.Models.FichaTecnica>
 
-
-<h2>Tabela Ficha Técnica</h2>
-<h1>    
-    @ViewBag.Tempo
-</h1>
-
-<p>
-    <a asp-action="Create">+ Novo</a>
-</p>
-
-<table class="table">
+<table class="uk-table uk-table-small uk-table-responsive uk-table-divider">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NomePreparacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ingredientes)
-            </th>
+            <th>INEP</th>
+            <th>Nome Escola</th>
+            <th>Rede de Ensino</th>
+            <th>CNPJ</th>
+            <th>Razão Social</th>
 
-            <th></th>
+
         </tr>
     </thead>
     <tbody>
-    @foreach (var item in Model)
+        @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomePreparacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Ingredientes)
-                </td>
+                        <tr>
+                            <td>@item.NomePreparacao</td>
+                            <td>@item.Ingredientes</td>
+                            <td>@item.Descricao</td>
+                            <td>@item.Quantidade</td>
+                            <td>@item.ModoPreparo</td>
 
 
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
+                            <td>
+                                <a asp-action="Edit" asp-controller="FichaTecnica" asp-route-id="@item.Id" class="icon-editar">
+                                    <span uk-icon="icon: file-edit; ratio:0.9"></span>
+                                </a>
+                                <a asp-action="Excluir" asp-controller="FichaTecnica" asp-route-id="@item.Id" class="icon-excluir">
+                                    <span uk-icon="icon:trash; ratio:0.9"></span>
+                                </a>
+
+
+                            </td>
+                        </tr>
         }
     </tbody>
 </table>
+
+
+<!-- ////////////////// Paginação ///////////////////////-->
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    var prev = Model.PageIndex - 1;
+    var next = Model.PageIndex + 1;
+
+}
+
+<ul class="uk-pagination" uk-margin>
+    <li>
+        <a href="#" onclick="Paginacao(@prev)">
+            <span uk-pagination-previous></span>
+        </a>
+    </li>
+    @for (int pag = 1; pag <= Model.TotalPages; pag++)
+    {
+                    <li>
+                        <a href="#" onclick="Paginacao(@pag)">@pag</a>
+                    </li>
+    }
+    <li>
+        <a href="#" onclick="Paginacao(@next)">
+            <span uk-pagination-next></span>
+        </a>
+    </li>
+</ul>
+
+
+
