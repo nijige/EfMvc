@@ -1,0 +1,68 @@
+
+
+<header class="grid-column1">
+  <h1 class="logo">Nutri++</h1>
+  <nav>
+    <ul>
+      <li><a asp-area="" asp-controller="Dieta" asp-action="Index">INÍCIO</a></li> 
+      <li><a asp-area="" asp-controller="Dieta" asp-action="Create">NOVA DIETA</a></li>
+      <li><a asp-area="" asp-controller="FichaTecnica" asp-action="Create">Ficha de Preparo</a></li>
+      <li><a asp-area="" asp-controller="Home" asp-action="Index">LOGOUT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="grid-column2">
+  <form action="">
+    <fieldset>
+      <legend>Nova Dieta</legend>
+      <div class="input-block">
+        <label for="nome">Nome da Dieta</label>
+        <input type="text" name="nome" id="nome" required>
+      </div>
+    </fieldset>
+
+    <fieldset id="schedule-items">
+      <legend>Produtos da Dieta
+        <button type="button" id="add-produto">+ Novo Produto</button>
+      </legend>
+
+      <div class="schedule-item">
+        <div class="input-block">
+          <label for="nome_produto">Nome</label>
+          <input type="text" name="nome_produto" id="nome_produto" required>
+        </div>
+
+        <div class="input-block">
+          <label for="info_carboidrato">Carboidrato</label>
+          <input type="text" name="info_carboidrato" id="info_carboidrato" required>
+        </div>
+        <div class="input-block">
+          <label for="info_proteina">Proteína</label>
+          <input type="text" name="info_proteina" id="info_proteina" required>
+        </div>
+        <div class="input-block">
+          <label for="info_gordura">Gordura</label>
+          <input type="text" name="info_gordura" id="info_gordura" required>
+        </div>
+
+        <div class="input-block">
+          <label for="qtd_grama">Quantidade / grama</label>
+          <input name="qtd_grama" id="qtd_grama" type="number" required>
+        </div>
+
+        <div class="input-block">
+          <label for="valor">Valor / R$</label>
+          <input name="valor" id="valor" type="number" required>
+        </div>
+      </div> 
+    </fieldset>    
+  </form>
+  <footer>
+    <p>
+      <img src="warning.svg" alt="Aviso importante">
+      Importante! <br> Preencha todos os campos
+    </p>
+    <button type="submit" form="create-class">Salvar Dieta</button>
+  </footer>
+</main>

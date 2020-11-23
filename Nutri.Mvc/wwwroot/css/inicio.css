@@ -1,0 +1,84 @@
+
+p {
+  margin-bottom: 0;
+}
+
+.grid-column2 {
+  display: grid;
+}
+
+.grid-column2 .resumo h2 {
+  font-size: 1.4rem; 
+}
+
+.grid-column2 .resumo .calorias {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.grid-column2 .resumo .text-calorias {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.grid-column2 .resumo .info-nutri {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+
+.grid-column2 .resumo .info-nutri div {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.grid-column2 .resumo .info-nutri div .carboidrato,
+.grid-column2 .resumo .info-nutri div .proteina,
+.grid-column2 .resumo .info-nutri div .gordura {
+  font-weight: bold;
+}
+
+.grid-column2 .resumo .info-nutri div .text-nutri {
+  font-size: 1.4rem;
+}
+
+.grid-column2 .refeicoes {
+  
+  margin-top: 2rem;
+}
+
+.grid-column2 .refeicoes h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.grid-column2 .refeicoes a {
+  text-decoration: none;
+  color: black;
+}
+
+.grid-column2 .refeicoes .item {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: greenyellow;
+
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.grid-column2 .refeicoes .item .titulo,
+.grid-column2 .refeicoes .item .total-calorias,
+.grid-column2 .refeicoes .item .custo-total {
+  font-weight: bold;
+}
+
+.grid-column2 .refeicoes .item div {
+  font-size: 1.4rem;
+  text-align: center;
+}
