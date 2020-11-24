@@ -8,11 +8,11 @@ namespace Nutri.Data
         public Contexto(DbContextOptions<Contexto> options) : base(options)
         {
         }
-        public DbSet<Usuario> Usuario { get; set; }
-        public DbSet<Categoria> Categoria { get; set; }
-        public DbSet<FichaTecnica> FichaTecnica { get; set; }
-
-
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<FichaTecnica> FichaTecnicas { get; set; }
+        public DbSet<Dieta> Dietas { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
     }
 }
